@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jigokunoō's Translator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-theme="dark">
+  <div class="app">
+    <div class="card">
+      <header>
+        <div class="logo">J</div>
+        <div>
+          <h1>Jigokunoō's Translator</h1>
+          <p class="lead">Translate between 10 languages — ready for Vercel deployment.</p>
+        </div>
+        <div style="margin-left:auto;text-align:right">
+          <div style="display:flex;gap:8px;align-items:center">
+            <label class="muted">Dark</label>
+            <button id="themeToggle" class="switch ghost">Toggle</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="controls">
+        <div style="flex:1">
+          <div class="row">
+            <div class="col">
+              <label class="muted">From</label>
+              <select id="fromLang"></select>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+              <button id="swapBtn" class="swap" title="Swap languages">⇄</button>
+            </div>
+            <div class="col">
+              <label class="muted">To</label>
+              <select id="toLang"></select>
+            </div>
+          </div>
+        </div>
+        <div style="width:220px;display:flex;flex-direction:column;gap:8px">
+          <label class="muted">Options</label>
+          <div style="display:flex;gap:8px">
+            <button id="translateBtn">Translate</button>
+            <button id="copyBtn" class="ghost">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px" class="row">
+        <div class="col">
+          <label class="muted">Input</label>
+          <textarea id="inputText" placeholder="Type or paste text here..."></textarea>
+        </div>
+        <div class="col">
+          <label class="muted">Output</label>
+          <textarea id="outputText" readonly placeholder="Translation will appear here..."></textarea>
+        </div>
+      </div>
+
+      <footer>
+        <div class="muted">Serverless on Vercel — proxying LibreTranslate/Argos APIs.</div>
+        <div class="muted">Languages: Hindi, English, Japanese, Filipino, Indonesian, Arabic, Chinese, French, Korean, German</div>
+      </footer>
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
